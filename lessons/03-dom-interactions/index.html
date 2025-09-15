@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Workshop Directory · Lesson 03</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Workshop Directory</h1>
+      <p class="lede">
+        Built for Lesson 03 of ART215. Works without JavaScript, then levels up with accessible interactions once the script loads.
+      </p>
+      <button class="open-modal" data-modal-target="proposal-modal" aria-haspopup="dialog" aria-controls="proposal-modal">
+        Pitch a Workshop
+      </button>
+    </header>
+
+    <main class="layout" id="main-content">
+      <section aria-labelledby="filter-heading" class="filters">
+        <h2 id="filter-heading">Filter by vibe</h2>
+        <p>Start typing to highlight the workshops that match your mood.</p>
+        <label class="filter-label" for="filter-input">Search workshops</label>
+        <input id="filter-input" name="filter" type="search" placeholder="e.g. print, audio, code" />
+      </section>
+
+      <section aria-labelledby="workshop-heading" class="workshop-list">
+        <h2 id="workshop-heading">Upcoming sessions</h2>
+        <ul class="cards" data-filter-target>
+          <li class="card" data-tags="print typography community">
+            <h3>Collaborative Zine Sprint</h3>
+            <p>Create a zine from scratch with strangers. Layout tips included.</p>
+            <p class="meta">Facilitator: Jules · Level: Beginner friendly</p>
+          </li>
+          <li class="card" data-tags="audio electronics repair">
+            <h3>Synth Repair Clinic</h3>
+            <p>Diagnose and revive analog synths using modular troubleshooting flows.</p>
+            <p class="meta">Facilitator: Mina · Level: Intermediate</p>
+          </li>
+          <li class="card" data-tags="code accessibility web">
+            <h3>Access-First Web Sprint</h3>
+            <p>Audit and refactor community websites with an accessibility-first mindset.</p>
+            <p class="meta">Facilitator: Jordan · Level: All welcome</p>
+          </li>
+          <li class="card" data-tags="audio storytelling community">
+            <h3>Oral History Recording Lab</h3>
+            <p>Capture neighborhood stories with portable audio gear and ethical consent practices.</p>
+            <p class="meta">Facilitator: Zahra · Level: Beginner</p>
+          </li>
+          <li class="card" data-tags="code data visualization">
+            <h3>Mutual Aid Dashboard Hack</h3>
+            <p>Prototype data visualizations that keep resource distribution transparent.</p>
+            <p class="meta">Facilitator: Diego · Level: Intermediate</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <dialog id="proposal-modal" class="modal" aria-labelledby="modal-title">
+      <form method="dialog" class="modal-content">
+        <header>
+          <h2 id="modal-title">Pitch your workshop</h2>
+          <button type="button" class="close-modal" aria-label="Close proposal form">×</button>
+        </header>
+        <p>Use this form to propose a new session. Keep it weird, keep it kind.</p>
+        <label for="proposal-title">Workshop title</label>
+        <input id="proposal-title" name="title" type="text" required />
+        <label for="proposal-focus">What will folks learn?</label>
+        <textarea id="proposal-focus" name="focus" rows="4" required></textarea>
+        <menu class="modal-actions">
+          <button type="reset">Reset</button>
+          <button type="submit">Send it</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

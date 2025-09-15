@@ -1,0 +1,194 @@
+/*
+  This stylesheet is intentionally verbose so you can narrate every step.
+  Breakpoints: base (mobile), 48rem, 72rem.
+*/
+
+:root {
+  color-scheme: only light;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --color-bg: #0f0f10;
+  --color-surface: #18181b;
+  --color-surface-alt: #27272a;
+  --color-text: #f4f4f5;
+  --color-accent: #f97316;
+  --radius-lg: 1.5rem;
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.site-header {
+  padding: var(--space-xl) var(--space-sm) var(--space-lg);
+  text-align: center;
+  background: radial-gradient(circle at top, #1d1d20, var(--color-surface));
+  border-bottom: 1px solid rgba(244, 244, 245, 0.08);
+}
+
+.eyebrow {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(244, 244, 245, 0.65);
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  margin-bottom: var(--space-sm);
+}
+
+.lede {
+  margin: 0 auto var(--space-md);
+  max-width: 45ch;
+  color: rgba(244, 244, 245, 0.75);
+}
+
+.cta {
+  border: none;
+  background: var(--color-accent);
+  color: #111;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta:hover,
+.cta:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 1rem 2.5rem rgba(249, 115, 22, 0.35);
+}
+
+.layout {
+  display: grid;
+  gap: var(--space-lg);
+  padding: var(--space-lg) var(--space-sm) var(--space-xl);
+}
+
+.layout > * {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  box-shadow: inset 0 0 0 1px rgba(244, 244, 245, 0.05);
+}
+
+.event-list,
+blockquote {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.event-list li + li {
+  margin-top: var(--space-sm);
+  border-top: 1px solid rgba(244, 244, 245, 0.08);
+  padding-top: var(--space-sm);
+}
+
+.card {
+  background-color: var(--color-surface-alt);
+  padding: var(--space-sm);
+  border-radius: calc(var(--radius-lg) - 0.5rem);
+}
+
+.card p {
+  margin: var(--space-xs) 0 0;
+  color: rgba(244, 244, 245, 0.65);
+}
+
+.link-button {
+  display: inline-block;
+  color: var(--color-text);
+  text-decoration: none;
+  background: linear-gradient(135deg, #f97316, #fb7185);
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.8rem;
+  font-weight: 600;
+}
+
+blockquote {
+  font-size: 1.1rem;
+  background-color: var(--color-surface-alt);
+  padding: var(--space-sm);
+  border-left: 4px solid var(--color-accent);
+  border-radius: calc(var(--radius-lg) - 1rem);
+}
+
+.site-footer {
+  text-align: center;
+  padding: var(--space-lg) var(--space-sm);
+  color: rgba(244, 244, 245, 0.5);
+}
+
+/* ---------------------------------------------
+   Breakpoint @ 48rem: introduce two-column grid
+---------------------------------------------- */
+@media (min-width: 48rem) {
+  .layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-sm);
+  }
+
+  .cta-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .testimonials {
+    grid-column: span 2;
+  }
+}
+
+/* ---------------------------------------------
+   Breakpoint @ 72rem: use grid template areas
+---------------------------------------------- */
+@media (min-width: 72rem) {
+  .layout {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+      "about about cta"
+      "events gallery cta"
+      "events gallery testimonials";
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  .events {
+    grid-area: events;
+  }
+
+  .gallery {
+    grid-area: gallery;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cta-panel {
+    grid-area: cta;
+  }
+
+  .testimonials {
+    grid-area: testimonials;
+  }
+}

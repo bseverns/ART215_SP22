@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Microsite Starter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="skip-links" aria-label="Skip links">
+        <a href="#main-content">Skip to content</a>
+      </nav>
+      <div class="hero">
+        <p class="eyebrow">Portfolio microsite starter</p>
+        <h1>Subject Name Here</h1>
+        <p class="lede">
+          Replace this text with a bold, respectful introduction to your subject. Keep it concise and hook visitors immediately.
+        </p>
+        <div class="actions">
+          <a class="button" href="#featured-work">See featured work</a>
+          <button class="ghost" data-modal-target="contact-modal">Contact / Support</button>
+        </div>
+      </div>
+      <ul class="meta">
+        <li><strong>Discipline:</strong> <span data-field="discipline">Interdisciplinary</span></li>
+        <li><strong>Location:</strong> <span data-field="location">Twin Cities, MN</span></li>
+        <li><strong>Latest project:</strong> <span data-field="project">Community soundscape</span></li>
+      </ul>
+    </header>
+
+    <main id="main-content" class="layout">
+      <section id="featured-work" aria-labelledby="featured-heading">
+        <header>
+          <h2 id="featured-heading">Featured work</h2>
+          <p>Swap in case studies or artifacts. Each `<article>` can include media, description, and links.</p>
+        </header>
+        <div class="cards">
+          <article>
+            <h3>Project One</h3>
+            <p class="summary">Describe the project, collaborators, and impact.</p>
+            <a href="#" class="text-link">View case study</a>
+          </article>
+          <article>
+            <h3>Project Two</h3>
+            <p class="summary">Highlight the challenge, process, and outcome.</p>
+            <a href="#" class="text-link">View case study</a>
+          </article>
+          <article>
+            <h3>Project Three</h3>
+            <p class="summary">Call out metrics or testimonials that prove the value.</p>
+            <a href="#" class="text-link">View case study</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="process" aria-labelledby="process-heading">
+        <h2 id="process-heading">Process &amp; practice</h2>
+        <p>
+          Use this space for a manifesto, artist statement, or behind-the-scenes glimpse. Consider layering in pull quotes or a
+          small accordion for frequently asked questions.
+        </p>
+        <div class="accordion" data-accordion>
+          <button class="accordion-toggle" aria-expanded="false">
+            <span>FAQ: How do collaborations work?</span>
+          </button>
+          <div class="accordion-panel" hidden>
+            <p>
+              Replace this with your subject’s answer. Remember to note contact preferences and boundaries if relevant.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="timeline" aria-labelledby="timeline-heading">
+        <h2 id="timeline-heading">Milestones</h2>
+        <ol class="timeline">
+          <li>
+            <time datetime="2020">2020</time>
+            <p>Milestone description — maybe a residency, award, or community project.</p>
+          </li>
+          <li>
+            <time datetime="2022">2022</time>
+            <p>Another milestone. Swap in details that build narrative momentum.</p>
+          </li>
+          <li>
+            <time datetime="2024">2024</time>
+            <p>Most recent highlight or current work-in-progress.</p>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-field="year">2024</span> Subject Name. Built with care by [Your Name].</p>
+      <a href="#top" class="text-link">Back to top</a>
+    </footer>
+
+    <dialog id="contact-modal" class="modal" aria-labelledby="modal-heading">
+      <form method="dialog" class="modal-content">
+        <header>
+          <h2 id="modal-heading">Contact / Support</h2>
+          <button type="button" class="close-modal" aria-label="Close contact panel">×</button>
+        </header>
+        <p>List real contact options or support links. Replace this with forms or third-party embeds if needed.</p>
+        <menu class="modal-actions">
+          <button value="cancel" class="ghost">Close</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" aria-labelledby="title desc" role="img">
+  <title id="title">Responsive layout wireframe</title>
+  <desc id="desc">Three breakpoints showing how sections rearrange from stacked to grid layout.</desc>
+  <style>
+    .panel { fill: #18181b; stroke: #f97316; stroke-width: 6; rx: 24; ry: 24; }
+    .label { fill: #f4f4f5; font-family: 'Inter', sans-serif; font-size: 36px; text-anchor: middle; }
+    .caption { fill: #a1a1aa; font-family: 'Inter', sans-serif; font-size: 28px; text-anchor: middle; }
+  </style>
+
+  <!-- Mobile stack -->
+  <rect class="panel" x="40" y="40" width="320" height="520" />
+  <text class="caption" x="200" y="90">Mobile</text>
+  <rect class="panel" x="70" y="120" width="260" height="80" />
+  <text class="label" x="200" y="170">Header</text>
+  <rect class="panel" x="70" y="220" width="260" height="120" />
+  <text class="label" x="200" y="280">About</text>
+  <rect class="panel" x="70" y="360" width="260" height="120" />
+  <text class="label" x="200" y="420">Events</text>
+  <rect class="panel" x="70" y="500" width="260" height="60" />
+  <text class="label" x="200" y="540">Footer</text>
+
+  <!-- Tablet grid -->
+  <rect class="panel" x="440" y="40" width="320" height="520" />
+  <text class="caption" x="600" y="90">Tablet (48rem)</text>
+  <rect class="panel" x="470" y="120" width="260" height="80" />
+  <text class="label" x="600" y="170">Header</text>
+  <rect class="panel" x="470" y="220" width="120" height="240" />
+  <text class="label" x="530" y="340" transform="rotate(-90 530 340)">Events</text>
+  <rect class="panel" x="610" y="220" width="120" height="120" />
+  <text class="label" x="670" y="280">Gallery</text>
+  <rect class="panel" x="610" y="360" width="120" height="100" />
+  <text class="label" x="670" y="410">CTA</text>
+  <rect class="panel" x="470" y="470" width="260" height="70" />
+  <text class="label" x="600" y="515">Footer</text>
+
+  <!-- Desktop grid -->
+  <rect class="panel" x="840" y="40" width="320" height="520" />
+  <text class="caption" x="1000" y="90">Desktop (72rem+)</text>
+  <rect class="panel" x="870" y="120" width="260" height="80" />
+  <text class="label" x="1000" y="170">Header</text>
+  <rect class="panel" x="870" y="220" width="160" height="150" />
+  <text class="label" x="950" y="285">About</text>
+  <rect class="panel" x="870" y="380" width="160" height="120" />
+  <text class="label" x="950" y="440">Events</text>
+  <rect class="panel" x="870" y="340" width="160" height="30" />
+  <text class="label" x="950" y="360">Gallery</text>
+  <rect class="panel" x="1040" y="220" width="90" height="220" />
+  <text class="label" x="1085" y="330" transform="rotate(-90 1085 330)">CTA</text>
+  <rect class="panel" x="870" y="510" width="260" height="70" />
+  <text class="label" x="1000" y="555">Footer</text>
+  <rect class="panel" x="870" y="470" width="160" height="30" />
+  <text class="label" x="950" y="490">Testimonials</text>
+</svg>
